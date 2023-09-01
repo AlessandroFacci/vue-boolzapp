@@ -44,6 +44,9 @@ body {
 .img-nav-chat {
   width: 2.5rem;
   height: 2.5rem;
+
+  display: flex;
+  align-items: center;
 }
 
 .img-nav-chat img {
@@ -51,6 +54,10 @@ body {
   aspect-ratio: 1;
   border-radius: 100%;
   background-color: white;
+}
+
+.img-nav-chat p {
+  margin: 0 0 0 0.7rem;
 }
 
 .chat-nav ul {
