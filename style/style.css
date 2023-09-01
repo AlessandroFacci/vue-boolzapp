@@ -1,0 +1,121 @@
+body {
+  background-image: linear-gradient(#009688 15%, #d8dbd5 15%);
+}
+
+.container {
+  height: 90vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  /* debug */
+  border: 1px solid black;
+}
+
+/*# CHAT  */
+
+.chat-container {
+  width: 40%;
+  height: 100%;
+  border-right: 1px solid rgb(169, 167, 167);
+
+  background-color: #ffffff;
+
+  /* debug */
+  /* border: 1px dashed red; */
+}
+
+/** Nav chat  */
+
+.chat-nav {
+  width: 100%;
+  height: 3.5rem;
+  padding: 0 1rem;
+  background-color: #eaeaea;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img-nav-chat {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.img-nav-chat img {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.chat-nav ul {
+  list-style-type: none;
+  margin: 0;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-nav ul li {
+  padding: 0 0.5rem;
+}
+
+.chat-nav ul li i {
+  color: #b1b1b1;
+}
+
+/** Notifiche  */
+
+.notification-control {
+  width: 100%;
+  height: 4rem;
+  background-color: #8edafb;
+
+  display: flex;
+  align-items: center;
+}
+
+.bell {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  margin: 0 0.7rem 0 1.5rem;
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bell i {
+  color: #8edafb;
+}
+
+.notification-text p {
+  margin: 0;
+}
+
+.notification-text p:first-of-type {
+  font-size: 0.8rem;
+}
+
+.notification-text p:nth-of-type(2) {
+  font-size: 0.7rem;
+  text-decoration: underline;
+  color: #929191;
+}
+
+/*# MEX  */
+
+.mex-container {
+  width: 60%;
+  height: 100%;
+
+  /* debug */
+  /* border: 1px dashed red; */
+}
