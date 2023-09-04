@@ -75,19 +75,19 @@
 
         <!-- CONTACTS LIST -->
         <ul class="contacts-list">
-          <li class="contact">
+          <li class="contact" v-for="contact in contacts">
             <div class="contact-pic">
-              <img src="./img/avatar_1.jpg" alt="" />
+              <img :src="contact.avatar" alt="img" />
             </div>
 
             <div class="main-text">
-              <h3 class="main-text-upper">Michele</h3>
+              <h3 class="main-text-upper">{{contact.name}}</h3>
               <h4 class="main-text-lower">Ultimo messaggio inviato</h4>
             </div>
 
             <div class="time">12:00</div>
           </li>
-          <li class="contact">
+          <!-- <li class="contact">
             <div class="contact-pic">
               <img src="./img/avatar_2.jpg" alt="" />
             </div>
@@ -174,7 +174,7 @@
             </div>
 
             <div class="time">12:00</div>
-          </li>
+          </li> -->
         </ul>
       </div>
 
