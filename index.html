@@ -75,7 +75,11 @@
 
         <!-- CONTACTS LIST -->
         <ul class="contacts-list">
-          <li class="contact" v-for="contact in contacts">
+          <li
+            class="contact"
+            v-for="(contact, index) in contacts"
+            @click="changeActiveContact(index)"
+          >
             <div class="contact-pic">
               <img :src="contact.avatar" alt="img" />
             </div>
@@ -184,11 +188,11 @@
         <header class="col-header">
           <div class="user">
             <div class="user-pic">
-              <img src="./img/avatar_1.jpg" alt="" />
+              <img :src="contacts[activeContact].avatar" alt="" />
             </div>
 
             <div class="main-text">
-              <h3 class="main-text-upper">Michele</h3>
+              <h3 class="main-text-upper">{{contacts[activeContact].name}}</h3>
               <h4 class="main-text-lower">Ultimo accesso oggi alle 12:00</h4>
             </div>
           </div>
@@ -200,9 +204,13 @@
         </header>
 
         <section class="messages">
-          <div class="message sent">Hai portato a spasso il cane?</div>
-          <div class="message sent">Ricordati di stendere i panni</div>
-          <div class="message received">Tutto fatto!</div>
+          <div
+            class="message"
+            v-for="mex in contacts[activeContact].messages"
+            :class="(mex.status == 'sent') ? 'sent' : 'received'"
+          >
+            {{mex.message}}
+          </div>
         </section>
 
         <footer class="user-actions">
