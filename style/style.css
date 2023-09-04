@@ -189,6 +189,7 @@ input {
   display: flex;
   background-color: white;
   border: 1px solid #d4d4d4;
+  border-radius: 3px;
 }
 
 .search-icon {
@@ -198,10 +199,15 @@ input {
   border-right: 1px solid #d4d4d4;
 }
 
+.search-icon i {
+  color: #b9c0c9;
+}
+
 .search-input {
   width: 80%;
   border: none;
   padding: 0.2rem 0.5rem;
+  border-radius: 3px;
 }
 
 .contacts-list {
@@ -265,12 +271,14 @@ input {
 
 .messages > .message.sent {
   background-color: var(--sent-message-bg);
+  margin-right: 20px;
 
   align-self: flex-end;
 }
 
 .messages > .message.received {
   background-color: var(--received-message-bg);
+  margin-left: 20px;
 }
 
 .user-actions {
