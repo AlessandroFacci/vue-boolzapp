@@ -184,6 +184,15 @@ createApp({
       const newMessageCopy = { ...this.newMessage };
       this.contacts[this.activeContact].messages.push(newMessageCopy);
       this.newMessage.message = "";
+
+      setTimeout(() => {
+        const newAnswswer = {
+          date: "",
+          message: "Ok, va bene",
+          status: "received",
+        };
+        this.contacts[this.activeContact].messages.push(newAnswswer);
+      }, 1000);
     },
   },
 }).mount("#app");
