@@ -131,7 +131,14 @@
           </div>
 
           <div class="message-bar">
-            <input class="message-input" type="text" name="" id="" />
+            <input
+              class="message-input"
+              type="text"
+              name=""
+              id=""
+              v-model="newMessage.message"
+              @keyUp.enter="sendNewMessage()"
+            />
           </div>
 
           <div class="icons-container">

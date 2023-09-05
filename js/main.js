@@ -3,6 +3,11 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      newMessage: {
+        date: "",
+        message: "",
+        status: "sent",
+      },
       activeContact: 0,
       contacts: [
         {
@@ -172,6 +177,13 @@ createApp({
   methods: {
     changeActiveContact(index) {
       this.activeContact = index;
+    },
+
+    sendNewMessage() {
+      if (this.newMessage.message == "") return;
+      const newMessageCopy = { ...this.newMessage };
+      this.contacts[this.activeContact].messages.push(newMessageCopy);
+      this.newMessage.message = "";
     },
   },
 }).mount("#app");
