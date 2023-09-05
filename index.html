@@ -69,7 +69,12 @@
             <div class="search-icon">
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <input class="search-input" type="text" />
+            <input
+              class="search-input"
+              type="text"
+              v-model="inputContact"
+              @keyup="searchContact()"
+            />
           </div>
         </div>
 
@@ -79,6 +84,7 @@
             class="contact"
             v-for="(contact, index) in contacts"
             @click="changeActiveContact(index)"
+            v-show="contact.visible"
           >
             <div class="contact-pic">
               <img :src="contact.avatar" alt="img" />

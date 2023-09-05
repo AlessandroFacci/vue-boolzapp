@@ -9,6 +9,7 @@ createApp({
         status: "sent",
       },
       activeContact: 0,
+      inputContact: "",
       contacts: [
         {
           name: "Michele",
@@ -193,6 +194,17 @@ createApp({
         };
         this.contacts[this.activeContact].messages.push(newAnswswer);
       }, 1000);
+    },
+    searchContact() {
+      for (const contact of this.contacts) {
+        if (
+          contact.name.toUpperCase().includes(this.inputContact.toUpperCase())
+        ) {
+          contact.visible = true;
+        } else {
+          contact.visible = false;
+        }
+      }
     },
   },
 }).mount("#app");
