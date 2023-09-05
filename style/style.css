@@ -283,6 +283,7 @@ input {
 
 .dropdown .btn {
   padding: 0 0.5rem;
+  border: none;
 }
 
 .user-actions {
