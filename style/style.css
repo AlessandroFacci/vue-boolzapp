@@ -281,6 +281,10 @@ input {
   margin-left: 20px;
 }
 
+.dropdown .btn {
+  padding: 0 0.5rem;
+}
+
 .user-actions {
   display: flex;
   padding: 0 1rem;
